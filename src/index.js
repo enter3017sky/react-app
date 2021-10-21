@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { ThemeProvider } from 'styled-components';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const theme = {
+  color: {
+    primary_300: '',
+    primary_600: '',
+  },
+};
+
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
+  // </React.StrictMode>,
   document.getElementById('root'),
 );
 
